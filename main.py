@@ -132,8 +132,3 @@ async def reset_agent_state():
     agent = get_agent()
     agent.reset_state()
     return {"status": "reset", "state": agent.get_state()}
-
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
